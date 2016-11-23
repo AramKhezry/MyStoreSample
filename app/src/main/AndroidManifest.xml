@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.aramkhezry.MyStore">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_myapp"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.github.aramkhezry.MyStore.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.aramkhezry.MyStore.AddNewMemory"
+            />
+        <activity
+            android:name="com.github.aramkhezry.MyStore.EditActivity"
+            />
+        <activity android:name="com.github.aramkhezry.MyStore.ShowMemoryActivity"
+            />
+    </application>
+
+</manifest>

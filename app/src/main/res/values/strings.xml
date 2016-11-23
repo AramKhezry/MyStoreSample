@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name" >"خاطرات من"</string>
+    <string name="title_label">عنوان خاطره</string>
+    <string name="text_lable">متن خاطره</string>
+    <string name="add_label">اضافه کردن</string>
+    <string name="edit_label">ویرایش</string>
+    <string name="err_msg_name">متن خاطره را وارد کنید</string>
+    <string name="err_msg_title">عنوان خاطره را وارد کنید</string>
+    <string name="err_msg_hashtag">حداقل یک هشتگ باید داشته باشد</string>
+</resources>

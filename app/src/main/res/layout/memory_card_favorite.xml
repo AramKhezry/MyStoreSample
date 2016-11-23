@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:elevation="20dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="10dp"
+        card_view:contentPadding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/titleCard_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="10dp"
+                android:textColor="#f93566"
+
+                />
+
+            <ImageView
+                android:id="@+id/imageCard_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleCard_favorite" />
+
+
+            <TextView
+                android:id="@+id/textCard_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageCard_favorite"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textviewstyle"
+                android:gravity="right"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+
+
+            <TextView
+                android:id="@+id/dateCard_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tags_card"
+                android:textColor="#2b34ef"
+
+                />
+            <co.lujun.androidtagview.TagContainerLayout
+                android:id="@+id/tags_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_below="@id/textCard_favorite"
+                app:container_enable_drag="true"
+                app:horizontal_interval="10dp"
+                app:vertical_interval="10dp"
+                app:tag_clickable="true"
+                android:layout_marginTop="10dp"
+                app:tag_theme="random" />
+
+
+            <ImageView
+                android:id="@+id/favorite_favorite"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/dateCard_favorite"
+                android:src="@drawable/heart_favorit"
+                 />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
