@@ -167,7 +167,7 @@ public class ShowMemoryActivity extends AppCompatActivity {
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1001) {
+        if (requestCode == 1001 && requestCode==RESULT_OK) {
             memorey=(Memorey) data.getSerializableExtra("memory");
             showData(memorey);
 
