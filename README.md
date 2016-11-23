@@ -1,7 +1,5 @@
 # app for Save the Memories
 
-#ali
-
 #Dependencies
 
 - [Glide](https://github.com/bumptech/glide/)
