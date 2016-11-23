@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
             super(fm);
         }
 
+        
         @Override
         public CharSequence getPageTitle(int position) {
             return TITLES[position];
