@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -175,4 +176,10 @@ public class ShowMemoryActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu_option; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_memory_show, menu);
+        return true;
+    }
 }

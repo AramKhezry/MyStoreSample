@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add_black_36dp"
-        app:backgroundTint="#FFF50057"
+        app:backgroundTint="#f55200"
         app:elevation="4dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"/>
