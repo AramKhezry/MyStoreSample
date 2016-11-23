@@ -28,8 +28,10 @@ You can download the latest Version APK from here:https://github.com/AramKhezry/
 #Developed By
 
 * Aram Khezry
- * [Twitter : AramKhezry](https://twitter.com/aramkhezry)
- * [Telegram : AramKhezry](https://telegram.me/aramkhezry)
+ * [Twitter](https://twitter.com/aramkhezry)
+ * [Telegram](https://telegram.me/aramkhezry)
+ * [aramkhezry@gmail.com]
+ 
  
 #License
 
