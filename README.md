@@ -14,10 +14,10 @@
 
 
 ##Screenshots
-<img src="Screenshot_2016-11-23-16-44-21.png" width="200px" />
-<img src="Screenshot_2016-11-23-16-45-05.png" width="200px" />
-<img src="Screenshot_2016-11-23-16-45-14.png" width="200px" />
-<img src="Screenshot_2016-11-23-16-45-22.png" width="200px" />
+<img src="screenshot/Screenshot_2016-11-23-16-44-21.png" width="200px" />
+<img src="screenshot/Screenshot_2016-11-23-16-45-05.png" width="200px" />
+<img src="screenshot/Screenshot_2016-11-23-16-45-14.png" width="200px" />
+<img src="screenshot/Screenshot_2016-11-23-16-45-22.png" width="200px" />
 
 
 #Developed By
