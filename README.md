@@ -13,6 +13,11 @@
 - [RecycleView](http://www.androidhive.info/2016/05/android-working-with-card-view-and-recycler-view/)
 
 
+#Preview
+##Demo
+You can download the latest Version APK from here:https://github.com/AramKhezry/MyStoreSample/blob/master/apk/MyStory.apk
+
+
 ##Screenshots
 <img src="screenshot/Screenshot_2016-11-23-18-00-03[1].png" width="200px" />
 <img src="screenshot/Screenshot_2016-11-23-18-00-12[1].png" width="200px" />
