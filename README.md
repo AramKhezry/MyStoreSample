@@ -30,7 +30,7 @@ You can download the latest Version APK from here:https://github.com/AramKhezry/
 * Aram Khezry
  * [Twitter](https://twitter.com/aramkhezry)
  * [Telegram](https://telegram.me/aramkhezry)
- * [aramkhezry@gmail.com]
+ * aramkhezry@gmail.com
  
  
 #License
