@@ -32,8 +32,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittextstyle"
                 android:hint="@string/title_label"
-                android:padding="10dp"
-                android:paddingTop="10dp" />
+                />
 
         </RelativeLayout>
 
@@ -53,7 +52,7 @@
                 android:gravity="top"
                 android:hint="@string/text_lable"
                 android:lines="5"
-                android:padding="10dp" />
+                 />
             <LinearLayout
                 android:id="@+id/layout_hashtag"
                 android:layout_width="wrap_content"
@@ -67,7 +66,9 @@
                 android:id="@+id/edit_hashtag"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textMemory" />
+                android:layout_below="@+id/textMemory"
+                android:background="@drawable/edittextstyle"
+                android:hint="hashtag"/>
 
             <Button
                 android:id="@+id/btn_hashtag"
@@ -76,6 +77,7 @@
                 android:layout_below="@id/textMemory"
                 android:layout_toRightOf="@+id/edit_hashtag"
                 android:text="hashtag"
+
                 />
             </LinearLayout>
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gradient="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.dynamitechetan.flowinggradient.FlowingGradient
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        gradient:transition_drawable="@drawable/trans"
+        gradient:transition_duration="10000" />
+
+    <LinearLayout
+        android:id="@+id/singInPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordsignIn"
+            android:hint="Password"
+            android:background="@drawable/edittextstyle"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:id="@+id/singIn"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/password"
+            android:gravity="center"
+            android:text="ورود"
+
+            />
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/singin"
+            android:layout_marginTop="20dp"
+            android:text="ایجاد یک حساب کاربری"
+            android:textColor="#080156"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -9,22 +9,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.github.aramkhezry.MyStore.MainActivity"
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.github.aramkhezry.MyStore.AddNewMemory"
-            />
-        <activity
-            android:name="com.github.aramkhezry.MyStore.EditActivity"
-            />
-        <activity android:name="com.github.aramkhezry.MyStore.ShowMemoryActivity"
-            />
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.github.aramkhezry.MyStore.AddNewMemory" />
+        <activity android:name="com.github.aramkhezry.MyStore.EditActivity" />
+        <activity android:name="com.github.aramkhezry.MyStore.ShowMemoryActivity" />
     </application>
 
 </manifest>

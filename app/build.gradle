@@ -33,6 +33,7 @@ dependencies {
     compile 'com.alirezaafkar:sundatepicker:2.0.4'
     compile 'com.github.greenrobot.greenDAO:greendao:V2.1.0'
     compile 'com.github.bkhezry:ImagePicker:v1.1.3'
+    compile 'com.github.scottyab:showhidepasswordedittext:0.8'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:design:25.0.1'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
@@ -40,7 +41,7 @@ dependencies {
     compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
     compile 'com.afollestad.material-dialogs:core:0.9.0.1'
     compile 'com.afollestad.material-dialogs:commons:0.9.1.0'
-
+    compile 'com.dynamitechetan.flowinggradient:flowinggradient:1.1'
     compile('com.mikepenz:materialdrawer:5.4.0@aar') {
         transitive = true
     }
