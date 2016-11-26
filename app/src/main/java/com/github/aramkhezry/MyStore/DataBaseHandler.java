@@ -7,8 +7,8 @@ import android.util.Log;
 
 import com.github.aramkhezry.MyStore.Dao.DaoMaster;
 import com.github.aramkhezry.MyStore.Dao.DaoSession;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
-import com.github.aramkhezry.MyStore.Dao.MemoreyDao;
+import com.github.aramkhezry.MyStore.Dao.Memory;
+import com.github.aramkhezry.MyStore.Dao.MemoryDao;
 
 import java.util.List;
 
@@ -29,55 +29,55 @@ public class DataBaseHandler {
         daoSession = new DaoMaster(db).newSession();
     }
 
-    public void addMemory(Memorey memorey) {
+    public void addMemory(Memory memory) {
 
-        MemoreyDao memoreyDao=daoSession.getMemoreyDao();
-        memoreyDao.insert(memorey);
-        Log.d("aram",memoreyDao.count()+"");
+        MemoryDao memoryDao=daoSession.getMemoryDao();
+        memoryDao.insert(memory);
+        Log.d("aram",memoryDao.count()+"");
 
     }
 
 
 
 
-    public List<Memorey> getAllMemory() {
-        MemoreyDao memoreyDao=daoSession.getMemoreyDao();
-        Log.d("count_",memoreyDao.count()+"");
-        return memoreyDao.queryBuilder()
-                .orderDesc(MemoreyDao.Properties.Id)
+    public List<Memory> getAllMemory() {
+        MemoryDao memoryDao=daoSession.getMemoryDao();
+        Log.d("count_",memoryDao.count()+"");
+        return memoryDao.queryBuilder()
+                .orderDesc(MemoryDao.Properties.Id)
                 .list();
     }
 
     public void removeMemory(Long id) {
 
-        MemoreyDao memoreyDao=daoSession.getMemoreyDao();
+        MemoryDao memoreyDao=daoSession.getMemoryDao();
         memoreyDao.deleteByKey(id);
     }
 
-    public void EditMemory(Memorey memorey) {
-        MemoreyDao memoreyDao=daoSession.getMemoreyDao();
-        memoreyDao.update(memorey);
+    public void EditMemory(Memory memory) {
+        MemoryDao memoreyDao=daoSession.getMemoryDao();
+        memoreyDao.update(memory);
 
     }
 
     public void addFavorite(Long id, boolean favorite) {
 
-        MemoreyDao memoreyDao=daoSession.getMemoreyDao();
-        Memorey memorey = memoreyDao.load(id);
+        MemoryDao memoreyDao=daoSession.getMemoryDao();
+        Memory memorey = memoreyDao.load(id);
         memorey.setFavorite(favorite);
         memoreyDao.update(memorey);
 
     }
 
 
-    public List<Memorey> getAllMemoryFavorite() {
-        MemoreyDao memoreyDao=daoSession.getMemoreyDao();
-        Log.d("count",memoreyDao.count()+"");
-        List <Memorey> memoreyList= memoreyDao.queryBuilder()
-                .where(MemoreyDao.Properties.Favorite.eq(true))
-                .orderDesc(MemoreyDao.Properties.Id)
+    public List<Memory> getAllMemoryFavorite() {
+        MemoryDao memoryDao=daoSession.getMemoryDao();
+        Log.d("count",memoryDao.count()+"");
+        List <Memory> memoryList= memoryDao.queryBuilder()
+                .where(MemoryDao.Properties.Favorite.eq(true))
+                .orderDesc(MemoryDao.Properties.Id)
                 .list();
-        return memoreyList;
+        return memoryList;
     }
 
 }

@@ -22,7 +22,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
 import com.astuetz.PagerSlidingTabStrip;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity  extends AppCompatActivity {
     PagerSlidingTabStrip tabs;
     ViewPager pager;
     private MyPagerAdapter adapter;

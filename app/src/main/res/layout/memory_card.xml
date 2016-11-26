@@ -28,9 +28,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:paddingBottom="10dp"
-                android:textColor="#f93566"
                 android:paddingRight="20dp"
                 android:paddingTop="10dp"
+                android:textColor="#f93566"
 
                 />
 
@@ -49,8 +49,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/textviewstyle"
                 android:gravity="right"
-                android:padding="10dp"
                 android:lines="2"
+                android:padding="10dp"
                 android:scrollbars="vertical" />
 
 

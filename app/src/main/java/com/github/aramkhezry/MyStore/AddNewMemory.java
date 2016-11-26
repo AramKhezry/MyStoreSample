@@ -20,7 +20,7 @@ import android.widget.TextView;
 import com.alirezaafkar.sundatepicker.DatePicker;
 import com.alirezaafkar.sundatepicker.interfaces.DateSetListener;
 import com.bumptech.glide.Glide;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
+import com.github.aramkhezry.MyStore.Dao.Memory;
 import com.nguyenhoanglam.imagepicker.activity.ImagePicker;
 import com.nguyenhoanglam.imagepicker.activity.ImagePickerActivity;
 import com.nguyenhoanglam.imagepicker.model.Image;
@@ -181,14 +181,14 @@ public class AddNewMemory extends AppCompatActivity implements DateSetListener {
 
     private void addMemoryToDb(String url, String title, String text, String date, String tags) {
         DataBaseHandler dataBaseHandler = new DataBaseHandler(AddNewMemory.this);
-        Memorey memorey = new Memorey();
-        memorey.setTitle(title);
-        memorey.setText(text);
-        memorey.setImageName(url);
-        memorey.setCreatTime(date);
-        memorey.setFavorite(false);
-        memorey.setHashtag(tags);
-        dataBaseHandler.addMemory(memorey);
+        Memory memory = new Memory();
+        memory.setTitle(title);
+        memory.setText(text);
+        memory.setImageName(url);
+        memory.setCreatTime(date);
+        memory.setFavorite(false);
+        memory.setHashtag(tags);
+        dataBaseHandler.addMemory(memory);
 
 
     }

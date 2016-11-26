@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
+import com.github.aramkhezry.MyStore.Dao.Memory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,14 +22,14 @@ import co.lujun.androidtagview.TagContainerLayout;
 /**
  * Created by Raman on 11/7/2016.
  */
-public class MemoreysAdapter extends RecyclerView.Adapter<MemoreysAdapter.MyViewHolder> {
+public class MemorysAdapter extends RecyclerView.Adapter<MemorysAdapter.MyViewHolder> {
 
     private DataBaseHandler dataBaseHandler;
 
-    private List<Memorey> memoreyList;
+    private List<Memory> memoreyList;
     private Context context;
 
-    public MemoreysAdapter(List<Memorey> memoreyList, Context context) {
+    public MemorysAdapter(List<Memory> memoreyList, Context context) {
         dataBaseHandler = new DataBaseHandler(context);
         this.memoreyList = memoreyList;
         this.context = context;
@@ -70,7 +70,7 @@ public class MemoreysAdapter extends RecyclerView.Adapter<MemoreysAdapter.MyView
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
-        final Memorey memorey = memoreyList.get(position);
+        final Memory memorey = memoreyList.get(position);
         holder.titleMemorys.setText(memorey.getTitle());
         holder.textMEmorys.setText(memorey.getText());
         holder.dateMemory.setText(memorey.getCreatTime());

@@ -8,4 +8,10 @@
     <string name="err_msg_name">متن خاطره را وارد کنید</string>
     <string name="err_msg_title">عنوان خاطره را وارد کنید</string>
     <string name="err_msg_hashtag">حداقل یک هشتگ باید داشته باشد</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_dialog_title">پسورد خود را فراموش کرده اید؟</string>
+    <string name="activity_dialog_accept">بازیابی</string>
+    <string name="activity_dialog_decline">لفو</string>
+    <string name="activity_dialog_content">برای بازیابی رمز \'بازیابی\' را انتخاب کنید \n\n اگه پسورد خود را به یاد می آورید \'لغو \' را انتخاب کنید.</string>
+
 </resources>

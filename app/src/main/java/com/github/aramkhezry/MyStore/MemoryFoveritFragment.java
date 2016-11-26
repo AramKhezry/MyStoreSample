@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
+import com.github.aramkhezry.MyStore.Dao.Memory;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.nguyenhoanglam.imagepicker.view.GridSpacingItemDecoration;
 
@@ -32,8 +32,8 @@ import java.util.List;
 public class MemoryFoveritFragment extends Fragment {
 
     private RecyclerView  recyclerViewFavorite;
-    private MemoreysAdapterFavorite adapterFavorite;
-    private List<Memorey> memoryListFavorit;
+    private MemorysAdapterFavorite adapterFavorite;
+    private List<Memory> memoryListFavorit;
     private AccountHeader headerResult = null;
 
     private static final String ARG_POSITION = "position";
@@ -63,7 +63,7 @@ public class MemoryFoveritFragment extends Fragment {
 
         recyclerViewFavorite = (RecyclerView)rootView.findViewById(R.id.recycler_view_favorite);
         memoryListFavorit = new ArrayList<>();
-        adapterFavorite = new MemoreysAdapterFavorite(memoryListFavorit, getActivity());
+        adapterFavorite = new MemorysAdapterFavorite(memoryListFavorit, getActivity());
         RecyclerView.LayoutManager mLayoutManagerFavorite = new GridLayoutManager(getActivity(), 1);
         recyclerViewFavorite.setLayoutManager(mLayoutManagerFavorite);
         recyclerViewFavorite.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
@@ -139,7 +139,7 @@ public class MemoryFoveritFragment extends Fragment {
     private void prepareMemorysfavorite() {
 
         DataBaseHandler dataBaseHandler = new DataBaseHandler(getActivity());
-        List<Memorey> memoreyListDb = dataBaseHandler.getAllMemoryFavorite();
+        List<Memory> memoreyListDb = dataBaseHandler.getAllMemoryFavorite();
         memoryListFavorit.clear();
         memoryListFavorit.addAll(memoreyListDb);
         adapterFavorite.notifyDataSetChanged();

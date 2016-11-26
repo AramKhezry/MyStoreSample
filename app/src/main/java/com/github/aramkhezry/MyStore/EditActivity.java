@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.alirezaafkar.sundatepicker.DatePicker;
 import com.alirezaafkar.sundatepicker.interfaces.DateSetListener;
 import com.bumptech.glide.Glide;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
+import com.github.aramkhezry.MyStore.Dao.Memory;
 import com.nguyenhoanglam.imagepicker.activity.ImagePicker;
 import com.nguyenhoanglam.imagepicker.activity.ImagePickerActivity;
 import com.nguyenhoanglam.imagepicker.model.Image;
@@ -45,7 +45,7 @@ public class EditActivity extends AppCompatActivity implements DateSetListener {
     private String imageURL;
     private TextView editeTitle;
     private TextView editTextMemory;
-    private Memorey memory;
+    private Memory memory;
     private Button hashtag;
     private EditText  hashtagEdieText;
 
@@ -58,7 +58,7 @@ public class EditActivity extends AppCompatActivity implements DateSetListener {
         setTitle("");
 
         Intent intent = getIntent();
-        memory = (Memorey) intent.getSerializableExtra("memory");
+        memory = (Memory) intent.getSerializableExtra("memory");
 
 
         editeTitle = (TextView) findViewById(R.id.titleMemory);

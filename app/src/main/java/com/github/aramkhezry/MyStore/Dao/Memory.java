@@ -5,9 +5,9 @@ package com.github.aramkhezry.MyStore.Dao;
 import java.io.Serializable;
 
 /**
- * Entity mapped to table "MEMOREY".
+ * Entity mapped to table "MEMORY".
  */
-public class Memorey implements Serializable {
+public class Memory  implements Serializable{
 
     private Long id;
     private String title;
@@ -18,14 +18,14 @@ public class Memorey implements Serializable {
     private Boolean favorite;
     private String hashtag;
 
-    public Memorey() {
+    public Memory() {
     }
 
-    public Memorey(Long id) {
+    public Memory(Long id) {
         this.id = id;
     }
 
-    public Memorey(Long id, String title, String text, String creatTime, String imageName, String memoryDate, Boolean favorite, String hashtag) {
+    public Memory(Long id, String title, String text, String creatTime, String imageName, String memoryDate, Boolean favorite, String hashtag) {
         this.id = id;
         this.title = title;
         this.text = text;

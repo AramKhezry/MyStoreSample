@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
+import com.github.aramkhezry.MyStore.Dao.Memory;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.nguyenhoanglam.imagepicker.view.GridSpacingItemDecoration;
 
@@ -32,8 +32,8 @@ import java.util.List;
 
 public class MemoryFragment extends Fragment {
     private RecyclerView recyclerView;
-    private MemoreysAdapter adapter;
-    private List<Memorey> memoryList;
+    private MemorysAdapter adapter;
+    private List<Memory> memoryList;
     private AccountHeader headerResult = null;
     private static final String ARG_POSITION = "position";
 
@@ -76,7 +76,7 @@ public class MemoryFragment extends Fragment {
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         memoryList = new ArrayList<>();
-        adapter = new MemoreysAdapter(memoryList, getActivity());
+        adapter = new MemorysAdapter(memoryList, getActivity());
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
@@ -134,32 +134,6 @@ public class MemoryFragment extends Fragment {
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.about) {
-            new MaterialDialog.Builder(getActivity())
-                    .contentColor(Color.WHITE)
-                    .theme(Theme.DARK)
-                    .contentGravity(GravityEnum.START)
-                    .titleGravity(GravityEnum.START)
-                    .buttonsGravity(GravityEnum.START)
-                    .title("contact me at Twitter and Telegram and GitHub")
-                    .contentColor(Color.RED)
-                    .content("@aramkherzy")
-                    .show();
-
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1001) {
@@ -179,9 +153,9 @@ public class MemoryFragment extends Fragment {
     private void prepareMemorys() {
 
         DataBaseHandler dataBaseHandler = new DataBaseHandler(getActivity());
-        List<Memorey> memoreyListDb = dataBaseHandler.getAllMemory();
+        List<Memory> memoryListDb = dataBaseHandler.getAllMemory();
         memoryList.clear();
-        memoryList.addAll(memoreyListDb);
+        memoryList.addAll(memoryListDb);
         adapter.notifyDataSetChanged();
     }
 

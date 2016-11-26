@@ -19,7 +19,7 @@ import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
 import com.bumptech.glide.Glide;
-import com.github.aramkhezry.MyStore.Dao.Memorey;
+import com.github.aramkhezry.MyStore.Dao.Memory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class ShowMemoryActivity extends AppCompatActivity {
     private TextView title ,textMemory,dateMemory;
     private ImageView imageMemory,more,fovrite;
     TagContainerLayout mTagContainerLayout;
-     Memorey memorey;
+     Memory memory;
     DataBaseHandler dataBaseHandler;
 
     @Override
@@ -47,7 +47,7 @@ public class ShowMemoryActivity extends AppCompatActivity {
         setTitle("");
 
         dataBaseHandler=new DataBaseHandler(ShowMemoryActivity.this);
-        memorey=(Memorey) intent.getSerializableExtra("memory");
+        memory =(Memory) intent.getSerializableExtra("memory");
 
         mTagContainerLayout=(TagContainerLayout) findViewById(R.id.tags_card);
         mTagContainerLayout.setGravity(Gravity.RIGHT);
@@ -57,21 +57,21 @@ public class ShowMemoryActivity extends AppCompatActivity {
         imageMemory=(ImageView)findViewById(R.id.imageCard);
         fovrite=(ImageView)findViewById(R.id.favorite);
 
-        showData(memorey);
+        showData(memory);
 
         fovrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!memorey.getFavorite()) {
+                if(!memory.getFavorite()) {
                     Glide.with(ShowMemoryActivity.this).load(R.drawable.heart_favorit_sign).into(fovrite);
-                    memorey.setFavorite(true);
-                    dataBaseHandler.addFavorite(memorey.getId(),true);
+                    memory.setFavorite(true);
+                    dataBaseHandler.addFavorite(memory.getId(),true);
 
                 }
                 else {
                     Glide.with(ShowMemoryActivity.this).load(R.drawable.heart_favorit).into(fovrite);
-                    memorey.setFavorite(false);
-                    dataBaseHandler.addFavorite(memorey.getId(),false);
+                    memory.setFavorite(false);
+                    dataBaseHandler.addFavorite(memory.getId(),false);
                 }
 
             }
@@ -81,14 +81,14 @@ public class ShowMemoryActivity extends AppCompatActivity {
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPopupMenu(more,memorey.getId());
+                showPopupMenu(more, memory.getId());
             }
         });
 
     }
 
-    private void showData(Memorey memorey) {
-        if(memorey.getFavorite()) {
+    private void showData(Memory memory) {
+        if(memory.getFavorite()) {
             Glide.with(ShowMemoryActivity.this).load(R.drawable.heart_favorit_sign).into(fovrite);
 
         }
@@ -96,11 +96,11 @@ public class ShowMemoryActivity extends AppCompatActivity {
             Glide.with(ShowMemoryActivity.this).load(R.drawable.heart_favorit).into(fovrite);
 
         }
-        Glide.with(ShowMemoryActivity.this).load(this.memorey.getImageName()).into(imageMemory);
-        dateMemory.setText(memorey.getCreatTime());
-        textMemory.setText(memorey.getText());
-        title.setText(memorey.getTitle());
-        List<String> strings = new ArrayList<String>(Arrays.asList(memorey.getHashtag().split(";")));
+        Glide.with(ShowMemoryActivity.this).load(this.memory.getImageName()).into(imageMemory);
+        dateMemory.setText(memory.getCreatTime());
+        textMemory.setText(memory.getText());
+        title.setText(memory.getTitle());
+        List<String> strings = new ArrayList<String>(Arrays.asList(memory.getHashtag().split(";")));
         mTagContainerLayout.setTags(strings);
 
     }
@@ -131,13 +131,13 @@ public class ShowMemoryActivity extends AppCompatActivity {
                             .titleGravity(GravityEnum.END)
                             .buttonsGravity(GravityEnum.END)
                             .title(" می خواهید این خاطره را حذف کنید؟")
-                            .content("عنوان خاطره:" + memorey.getTitle())
+                            .content("عنوان خاطره:" + memory.getTitle())
                             .positiveText("بلی")
                             .negativeText("خیر")
                             .onPositive(new MaterialDialog.SingleButtonCallback() {
                                 @Override
                                 public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                    dataBaseHandler.removeMemory(memorey.getId());
+                                    dataBaseHandler.removeMemory(memory.getId());
                                     finish();
                             }
                             })
@@ -155,7 +155,7 @@ public class ShowMemoryActivity extends AppCompatActivity {
                 case R.id.edite:
 
                     Intent intent = new Intent(ShowMemoryActivity.this, EditActivity.class);
-                    intent.putExtra("memory", memorey);
+                    intent.putExtra("memory", memory);
                     startActivityForResult(intent, 1001);
                     return true;
 
@@ -168,8 +168,8 @@ public class ShowMemoryActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1001 && requestCode==RESULT_OK) {
-            memorey=(Memorey) data.getSerializableExtra("memory");
-            showData(memorey);
+            memory =(Memory) data.getSerializableExtra("memory");
+            showData(memory);
 
         }
 

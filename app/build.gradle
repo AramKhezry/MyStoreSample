@@ -45,15 +45,16 @@ dependencies {
     compile('com.mikepenz:materialdrawer:5.4.0@aar') {
         transitive = true
     }
-
+    compile ('com.github.orangegangsters:lollipin:2.0.0@aar') {
+        transitive = true
+    }
     compile 'com.lapism:searchview:3.8'
     compile 'co.lujun:androidtagview:1.0.5'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
-
 
     compile 'com.mikepenz:materialize:0.9.0@aar'
+    compile 'com.github.AramKhezry:L-Dialogs:v1.1.0'
     testCompile 'junit:junit:4.12'
 
 
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
