@@ -43,7 +43,7 @@ public class EditActivity extends AppCompatActivity implements DateSetListener {
     private ImageButton mStart;
     private ImageButton setMemory;
     private String imageURL;
-    private TextView editeTitle;
+    private TextView editTitle;
     private TextView editTextMemory;
     private Memory memory;
     private Button hashtag;
@@ -61,8 +61,8 @@ public class EditActivity extends AppCompatActivity implements DateSetListener {
         memory = (Memory) intent.getSerializableExtra("memory");
 
 
-        editeTitle = (TextView) findViewById(R.id.titleMemory);
-        editeTitle.setText(memory.getTitle());
+        editTitle = (TextView) findViewById(R.id.titleMemory);
+        editTitle.setText(memory.getTitle());
 
         ImageView editeImage = (ImageView) findViewById(R.id.imageView);
         Glide.with(this).load(memory.getImageName()).into(editeImage);
@@ -176,8 +176,8 @@ public class EditActivity extends AppCompatActivity implements DateSetListener {
     }
 
     private boolean validateTitleMemory() {
-        if (editeTitle.getText().toString().trim().isEmpty()) {
-            editeTitle.setError(getString(R.string.err_msg_title));
+        if (editTitle.getText().toString().trim().isEmpty()) {
+            editTitle.setError(getString(R.string.err_msg_title));
             return false;
         } else {
         }
@@ -222,7 +222,7 @@ public class EditActivity extends AppCompatActivity implements DateSetListener {
     }
 
     private void setMemoryToCircleView() {
-        String title = editeTitle.getText().toString();
+        String title = editTitle.getText().toString();
         String url = imageURL;
         String text = editTextMemory.getText().toString();
         String date = setTime;

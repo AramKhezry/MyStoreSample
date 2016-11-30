@@ -21,8 +21,11 @@ import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
 import com.astuetz.PagerSlidingTabStrip;
+import com.github.orangegangsters.lollipin.lib.PinActivity;
+import com.github.orangegangsters.lollipin.lib.PinCompatActivity;
+import com.github.orangegangsters.lollipin.lib.managers.LockManager;
 
-public class MainActivity  extends AppCompatActivity {
+public class MainActivity  extends PinCompatActivity {
     PagerSlidingTabStrip tabs;
     ViewPager pager;
     private MyPagerAdapter adapter;
@@ -31,6 +34,13 @@ public class MainActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //enable passcod to main activity
+        LockManager<CustomPinActivity> lockManager = LockManager.getInstance();
+        lockManager.enableAppLock(this, CustomPinActivity.class);
+        lockManager.getAppLock().setTimeout(30000);
+        lockManager.getAppLock().setLogoId(R.drawable.security_lock);
+
 
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -94,6 +104,11 @@ public class MainActivity  extends AppCompatActivity {
                         }
                     })
                     .show();
+
+        }
+        if (id == R.id.setting) {
+            Intent intent =new  Intent(MainActivity.this,SplashActivity.class);
+            startActivity(intent);
 
         }
 

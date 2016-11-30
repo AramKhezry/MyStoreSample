@@ -8,10 +8,26 @@
         android:orderInCategory="100"
         android:title="@string/app_name"
         app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/setting"
+        android:orderInCategory="100"
+        android:title="تنظیمات"
+        app:showAsAction="never"
+
+        />
+    <item
+        android:id="@+id/help"
+        android:orderInCategory="100"
+        android:title="راهنما"
+        app:showAsAction="never"
+
+        />
     <item
         android:id="@+id/about"
         android:orderInCategory="100"
-        android:title="about"
+        android:title="ارتباط با ما"
         app:showAsAction="never"
 
         />
