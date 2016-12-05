@@ -33,12 +33,4 @@
         android:text="غیر فعال کردن رمز ورود" />
 
 
-    <Button
-        android:id="@+id/singin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_unlock_pin"
-        android:layout_centerHorizontal="true"
-        android:text="ورود به برنامه" />
-
 </RelativeLayout>

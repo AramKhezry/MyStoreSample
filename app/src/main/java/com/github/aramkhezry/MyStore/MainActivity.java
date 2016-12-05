@@ -38,8 +38,9 @@ public class MainActivity  extends PinCompatActivity {
         //enable passcod to main activity
         LockManager<CustomPinActivity> lockManager = LockManager.getInstance();
         lockManager.enableAppLock(this, CustomPinActivity.class);
-        lockManager.getAppLock().setTimeout(30000);
+       // lockManager.getAppLock().setTimeout(30000);
         lockManager.getAppLock().setLogoId(R.drawable.security_lock);
+
 
 
         ActivityCompat.requestPermissions(MainActivity.this,
